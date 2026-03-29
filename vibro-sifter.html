@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>NEEDS | New Era Engineering and Development and Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+       
+       .form-label {
+    color: #64748b; /* Metallic Steel Grey */
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #f97316; /* Needs Orange */
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.btn-submit {
+    background-color: #f97316;
+    color: white;
+    font-family: 'Bookman Old Style', serif;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #ea580c;
+}
+
+
+
+        /* Specific fonts based on your logo design and request */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Condensed:wght@400;700&display=swap');
+        
+        body { font-family: 'Bookmanold', bookmanold; }
+        .hero-title { font-family: 'Playfair Display', serif; }
+        
+        /* Your logo is a high-tech screen/sifter design */
+        .needs-logo {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #fff 40%, #555 100%);
+            border: 4px solid #f97316; /* Orange border */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        /* Simulating the mesh pattern in your logo */
+        .needs-logo {
+            width: 50px;
+            height: 50px;
+            background-image: linear-gradient(#ccc 1px, transparent 1px), linear-gradient(90deg, #ccc 1px, transparent 1px);
+            background-size: 5px 5px;
+            border-radius: 50%;
+        }
+
+        /* Hero gradient background */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+      /* Animation for the infinite scroll */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 5)); } /* Adjust based on number of logos */
+}
+
+.logo-slider {
+    display: flex;
+    width: calc(250px * 10); /* Double the number of logos for seamless loop */
+    animation: scroll 40s linear infinite;
+}
+
+.logo-slider:hover {
+    animation-play-state: paused; /* Stops scrolling when a client hovers over it */
+}
+
+.slide {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.slide img {
+    max-height: 80px;
+    filter: grayscale(100%); /* Keeps it professional (Metallic Steel Grey look) */
+    transition: 0.3s;
+}
+
+.slide img:hover {
+    filter: grayscale(0%); /* Turns to original color on hover */
+}
+
+/* About Us Specific Styles */
+.about-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.title-orange {
+    color: #f97316; /* Your Brand Orange */
+    font-family: 'Bookman Old Style', serif;
+    font-weight: bold;
+}
+
+.text-metallic {
+    color: #64748b; /* Metallic Steel Grey */
+    line-height: 1.8;
+}
+
+.highlight-box {
+    border-left: 4px solid #f97316;
+    background-color: #fffaf5;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.counter-box {
+    font-family: 'Bookman Old Style', serif;
+    background: #f8fafc; /* Light metallic grey background */
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px 25px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.counter-number {
+    color: #f97316; /* Needs Orange */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 15px;
+    letter-spacing: 2px;
+}
+
+.counter-label {
+    color: #64748b; /* Metallic Steel Grey */
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+}
+
+counter-box {
+    font-family: 'Bookman Old Style', serif;
+    background: linear-gradient(145deg, #ffffff, #f1f5f9);
+    border: 1px solid #cbd5e1;
+    border-radius: 15px;
+    padding: 20px 30px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+}
+
+.counter-number {
+    color: #f97316; /* Needs Orange */
+    font-weight: 900;
+    margin-right: 20px;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.05);
+}
+
+.counter-label {
+    color: #64748b; /* Metallic Steel Grey */
+    font-size: 0.8rem;
+    line-height: 1.3;
+    font-family: sans-serif; /* Keep labels clean/modern */
+}
+/* Live Status Pulse Light */
+.status-pulse {
+    width: 10px;
+    height: 10px;
+    background-color: #22c55e; /* Industrial Green */
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    box-shadow: 0 0 0 rgba(34, 197, 94, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+.status-text {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #22c55e;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+ </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="bg-slate-950 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+               <img src="images/needs-logo.png" alt="NEEDS Logo" class="h-16 w-auto">
+                <div>
+                    <span class="text-3xl font-black text-white">NEEDS</span>
+                    <span class="block text-xs uppercase text-slate-400">New Era Engineering and Development and Solutions</span>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html?product=vibro#home" class="hover:text-orange-500">Home</a>
+                <a href="index.html?product=vibro#products" class="hover:text-orange-500">Products List</a>
+                <a href="index.html?product=vibro#about" class="hover:text-orange-500">About Us</a>
+                <a href="index.html?product=vibro#machinery" class="hover:text-orange-500">Primary Machinery</a>
+                <a href="index.html?product=vibro#contact" class="bg-orange-600 text-white px-5 py-2 rounded hover:bg-orange-700 transition shadow">Contact</a>
+
+
+            </div>
+        </div>
+    </nav>
+
+<div class="relative group">
+    <button class="flex items-center hover:text-orange-500 transition font-semibold">
+        PRODUCTS <i class="fas fa-chevron-down ml-2 text-xs"></i>
+    </button>
+    
+    <div class="absolute hidden group-hover:block bg-white shadow-2xl rounded-xl py-3 w-56 mt-2 border-t-4 border-orange-500 z-[100]">
+        <a href="vibro-sifter.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-orange-500 transition border-b border-gray-100">
+            <i class="fas fa-circle text-[8px] mr-2"></i> Vibro Sifter
+        </a>
+        <a href="ribbon-blender.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-orange-500 transition border-b border-gray-100">
+            <i class="fas fa-circle text-[8px] mr-2"></i> Ribbon Blender
+        </a>
+        <a href="pin-mill.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-orange-500 transition">
+            <i class="fas fa-circle text-[8px] mr-2"></i> Pin Mill / Multi Mill
+        </a>
+    </div>
+</div>
+
+<section class="py-20 bg-slate-50">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-wrap -mx-6">
+            
+            <div class="w-full lg:w-1/2 px-6 mb-12 lg:mb-0">
+                <div class="sticky top-24">
+                    <img src="images/vibro-sifter.jpg" class="w-full rounded-3xl shadow-2xl border-4 border-white">
+                    
+                    <div class="mt-6 p-4 bg-orange-50 border border-orange-200 rounded-xl flex items-center">
+                        <i class="fas fa-om text-orange-500 text-2xl mr-4"></i>
+                        <div>
+                            <p class="text-xs font-bold text-orange-600 uppercase tracking-widest">Design Integrity</p>
+                            <p class="text-sm text-steel-grey">Engineered with Vastu-compliant layout principles for energy optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 px-6">
+                <h1 class="text-5xl font-bold text-orange-500 mb-4" style="font-family: 'Bookman Old Style', serif;">Vibro Sifter</h1>
+                <p class="text-xl text-steel-grey mb-8 italic">Operational Status: <span class="text-green-600 font-bold">OPTIMAL</span></p>
+                
+                <h4 class="text-lg font-bold text-slate-800 mb-4 border-b-2 border-orange-500 inline-block">Technical Specifications</h4>
+                <table class="w-full text-left bg-white rounded-xl overflow-hidden shadow-md mb-10">
+                    <tr class="border-b border-gray-100">
+                        <td class="p-4 font-bold text-steel-grey">Model Range</td>
+                        <td class="p-4">24" to 96" Diameter</td>
+                    </tr>
+                    <tr class="border-b border-gray-100 bg-gray-50">
+                        <td class="p-4 font-bold text-steel-grey">Material of Construction</td>
+                        <td class="p-4">SS 316 / SS 304 / Carbon Steel(MS)</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-4 font-bold text-steel-grey">Vibratory Motor Power</td>
+                        <td class="p-4">0.5 HP to 7.55 HP 3 Phase (Flameproof available)</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-bold text-steel-grey">Screen Mesh</td>
+                        <td class="p-4">Customized as per technical NEEDS</td>
+                    </tr>
+                </table>
+
+                <h4 class="text-lg font-bold text-slate-800 mb-4">Key Features</h4>
+                <ul class="space-y-3 mb-10">
+                    <li class="flex items-center text-steel-grey"><i class="fas fa-check-circle text-orange-500 mr-3"></i> Easy dismantling and cleaning</li>
+                    <li class="flex items-center text-steel-grey"><i class="fas fa-check-circle text-orange-500 mr-3"></i> Dust-free closed-loop processing</li>
+                    <li class="flex items-center text-steel-grey"><i class="fas fa-check-circle text-orange-500 mr-3"></i> Low power consumption with high output</li>
+                </ul>
+
+                <a href="index.html?product=vibro#contact" class="btn-submit text-center block">
+                  Request Technical Quotation
+                </a>
+                 
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="swiper mySwiper w-full lg:w-1/2 px-6 mb-12 lg:mb-0">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="images/vibro-sifter1.jpg" class="w-full rounded-3xl shadow-2xl border-4 border-white" alt="Angle 1"></div>
+    <div class="swiper-slide"><img src="images/vibro-sifter2.jpg" class="w-full rounded-3xl shadow-2xl border-4 border-white" alt="Angle 2"></div>
+    <div class="swiper-slide"><img src="images/vibro-sifter3.jpg" class="w-full rounded-3xl shadow-2xl border-4 border-white" alt="Angle 3"></div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+
+
+
+
+
+
+
+
+<a href="https://wa.me/919433194783?text=I%20am%20interested%20in%20NEEDS%20machinery" 
+   class="fixed bottom-10 right-10 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all z-[100] flex items-center justify-center group"
+   target="_blank">
+    <i class="fab fa-whatsapp text-3xl"></i>
+    <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 font-bold whitespace-nowrap">
+        Chat For More Details... 
+    </span>
+</a>
+
+
+
+
+
+
+<footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div style="font-family: 'Bookman Old Style', serif; color: #f97316; font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">
+    NEEDS
+</div>
+            <p class="mb-8 max-w-lg mx-auto italic">"New Era Engineering and Development and Solutions"</p>
+            <div class="flex justify-center space-x-6 mb-8 text-xl">
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-sm">&copy; 2026 NEEDS | New Era Engineering and Development and Solutions. All rights reserved. | Built for Industrial Excellence.</p>
+        </div>
+
+    </footer>
+
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
