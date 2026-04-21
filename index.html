@@ -581,6 +581,31 @@
             <p class="text-sm">&copy; 2026 NEEDS | New Era Engineering and Development and Solutions. All rights reserved. | Built for Industrial Excellence.</p>
         </div>
     </footer>
+<script>
+    // 1. Your historical base number (5 years of inquiries)
+    const baseLegacyInquiries = 2500;
+    
+    // 2. Setup your unique NEEDS tracking keys
+    const namespace = 'needs-engineering';
+    const key = 'homepage-visits';
+
+    // 3. Fetch the live count and update the page
+    fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`)
+        .then(response => response.json())
+        .then(data => {
+            const countDisplay = document.getElementById('visitor-count');
+            // Adds the live database hits to your 2,500 base
+            const totalValue = data.count + baseLegacyInquiries;
+            
+            // Formats with commas (e.g., 2,542)
+            countDisplay.innerText = totalValue.toLocaleString();
+        })
+        .catch(error => {
+            console.error('Counter API failed, showing base number:', error);
+            // If the internet connection drops, it safely defaults to your base number
+            document.getElementById('visitor-count').innerText = baseLegacyInquiries.toLocaleString();
+        });
+</script>
 
 </body>
 </html>
