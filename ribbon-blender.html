@@ -247,7 +247,30 @@ counter-box {
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
+/* Make in India Badge Styles */
+.tricolor-text {
+    /* Saffron, White, Green gradient */
+    background: linear-gradient(135deg, #FF9933 30%, #FFFFFF 50%, #138808 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Adds a slight shadow so the white part doesn't disappear on light backgrounds */
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5)); 
+}
 
+.floating-badge {
+    /* Creates the smooth up-and-down floating motion */
+    animation: float-badge 3.5s ease-in-out infinite;
+}
+
+@keyframes float-badge {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.spin-slow {
+    animation: spin 8s linear infinite;
+}
     </style>
 </head>
 
@@ -369,7 +392,27 @@ counter-box {
 
 
 
-<a href="https://wa.me/919433194783?text=I%20am%20interested%20in%20NEEDS%20machinery" target="_blank" class="group flex items-center justify-end w-48 -mr-36 hover:-mr-2 transition-all duration-300 ease-in-out">
+<div class="fixed top-1/3 right-0 z-[100] flex flex-col space-y-2 translate-y-1/2">
+    
+    <a href="tel:+919433194783" class="group flex items-center justify-end w-48 -mr-36 hover:-mr-2 transition-all duration-300 ease-in-out">
+        <div class="bg-orange-500 text-white p-3 rounded-l-lg shadow-lg flex items-center justify-between w-full h-12">
+            <i class="fas fa-phone-alt text-xl w-6"></i>
+            <span class="font-bold text-sm tracking-wide whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 mr-2">
+                Call Us
+            </span>
+        </div>
+    </a>
+
+    <a href="mailto:enquiry@needspl.com" class="group flex items-center justify-end w-48 -mr-36 hover:-mr-2 transition-all duration-300 ease-in-out">
+        <div class="bg-slate-800 text-white p-3 rounded-l-lg shadow-lg flex items-center justify-between w-full h-12 border-l-4 border-orange-500">
+            <i class="fas fa-envelope text-xl w-6"></i>
+            <span class="font-bold text-sm tracking-wide whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 mr-2">
+                Email Us
+            </span>
+        </div>
+    </a>
+
+    <a href="https://wa.me/919433194783?text=I%20am%20interested%20in%20NEEDS%20machinery" target="_blank" class="group flex items-center justify-end w-48 -mr-36 hover:-mr-2 transition-all duration-300 ease-in-out">
         <div class="bg-green-500 text-white p-3 rounded-l-lg shadow-lg flex items-center justify-between w-full h-12">
             <i class="fab fa-whatsapp text-2xl w-6"></i>
             <span class="font-bold text-sm tracking-wide whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 mr-2">
@@ -378,6 +421,7 @@ counter-box {
         </div>
     </a>
 
+</div>
 </div>
 
 <div class="fixed bottom-10 left-10 z-[100] floating-badge bg-white/95 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-2xl border-b-4 border-orange-500 flex items-center space-x-3 cursor-default group">
