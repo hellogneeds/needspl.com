@@ -791,38 +791,36 @@
     </footer>
 <script>
    
-    <script>
+   <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const countDisplay = document.getElementById('visitor-count');
-        
-        // 1. Your 5-year history base
         const baseLegacyInquiries = 2500;
-        
-        // 2. The date you launched this new website tracking (YYYY-MM-DD format)
-        // Set this to today's date!
-        const launchDate = new Date('2026-04-20').getTime(); 
-        
-        // 3. Calculate how many days have passed since launch
-        const now = new Date().getTime();
-        const daysPassed = Math.max(0, Math.floor((now - launchDate) / (1000 * 60 * 60 * 24)));
-        
-        // 4. Estimate an average of 3 to 5 web inquiries per day
-        const dailyGrowth = daysPassed * 4; 
-        
-        // 5. Add a small "live session" bump (1 to 3 active viewers)
-        // We use sessionStorage so the number stays consistent while they browse
-        let sessionBump = sessionStorage.getItem('needs_live_bump');
-        if (!sessionBump) {
-            sessionBump = Math.floor(Math.random() * 3) + 1;
-            sessionStorage.setItem('needs_live_bump', sessionBump);
+        const countDisplay = document.getElementById('visitor-count');
+
+        if (countDisplay) {
+            countDisplay.innerText = "Loading...";
         }
 
-        // 6. Calculate total and display
-        const totalValue = baseLegacyInquiries + dailyGrowth + parseInt(sessionBump);
+        // The API database
+        const targetUrl = 'https://api.counterapi.dev/v1/needsengineering/homepage/up';
         
-        if (countDisplay) {
-            countDisplay.innerText = totalValue.toLocaleString();
-        }
+        // The NEW, stronger middleman proxy
+        const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(targetUrl);
+
+        fetch(proxyUrl)
+            .then(response => {
+                if (!response.ok) throw new Error("API connection failed");
+                return response.json();
+            })
+            .then(data => {
+                const totalValue = data.count + baseLegacyInquiries;
+                countDisplay.innerText = totalValue.toLocaleString();
+            })
+            .catch(error => {
+                console.error('Counter Error Bypass:', error);
+                if (countDisplay) {
+                    countDisplay.innerText = baseLegacyInquiries.toLocaleString();
+                }
+            });
     });
 </script>
 </body>
