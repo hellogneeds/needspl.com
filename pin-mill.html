@@ -247,7 +247,30 @@ counter-box {
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
+/* Make in India Badge Styles */
+.tricolor-text {
+    /* Saffron, White, Green gradient */
+    background: linear-gradient(135deg, #FF9933 30%, #FFFFFF 50%, #138808 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Adds a slight shadow so the white part doesn't disappear on light backgrounds */
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5)); 
+}
 
+.floating-badge {
+    /* Creates the smooth up-and-down floating motion */
+    animation: float-badge 3.5s ease-in-out infinite;
+}
+
+@keyframes float-badge {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.spin-slow {
+    animation: spin 8s linear infinite;
+}
     </style>
 </head>
 
